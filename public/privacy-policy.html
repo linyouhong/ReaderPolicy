@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlexReader Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --line: #dbe1ea;
+      --accent: #2563eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 35%);
+      color: var(--text);
+      font: 15px/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+    }
+
+    h1, h2 { margin-top: 0; }
+    h1 { font-size: 30px; margin-bottom: 6px; }
+    h2 { font-size: 20px; margin-top: 26px; margin-bottom: 8px; }
+    p, li { color: var(--muted); }
+    strong { color: var(--text); }
+    a { color: var(--accent); }
+
+    .meta {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #f9fbff;
+    }
+
+    code {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 1px 6px;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>FlexReader Privacy Policy</h1>
+    <p class="meta">Last updated: February 11, 2026</p>
+
+    <p>
+      This Privacy Policy explains how <strong>FlexReader</strong> handles data when you read books,
+      import files, browse Project Gutenberg, and use optional online AI features.
+    </p>
+
+    <h2>1. Data We Store On Your Device</h2>
+    <ul>
+      <li>Imported books and generated metadata (title, language, sections, chapters).</li>
+      <li>Dictionary data (offline dictionaries and optional generated entries).</li>
+      <li>Reading progress, shelf assignments, reader settings, and local reading stats.</li>
+      <li>Cached Gutenberg bookshelf and book-list snapshots for faster browsing.</li>
+      <li>Terms consent state and app-local preference data.</li>
+    </ul>
+    <p>
+      Storage is local to your device (IndexedDB and device preferences).
+    </p>
+
+    <h2>2. Network Requests</h2>
+    <ul>
+      <li><strong>Project Gutenberg:</strong> bookshelf browsing, catalog search, metadata lookups, and EPUB downloads.</li>
+      <li><strong>OpenAI / DeepSeek (optional):</strong> if enabled, the app sends selected text/context for:
+        translation, dictionary generation, quiz-question generation, and optional on-demand LLM word meanings.</li>
+    </ul>
+
+    <h2>3. API Keys</h2>
+    <ul>
+      <li>You can enter API keys in the pipeline UI for optional AI features.</li>
+      <li>Keys are used only to call the provider you selected.</li>
+      <li>Keys are not stored as account/profile data and are not uploaded to a FlexReader backend.</li>
+    </ul>
+
+    <h2>4. Data Sharing</h2>
+    <p>
+      FlexReader does not sell personal data. FlexReader has no first-party analytics SDK and no ad SDK in this build.
+      Data leaves the device only for features you explicitly use:
+    </p>
+    <ul>
+      <li>To Gutenberg for catalog and EPUB retrieval.</li>
+      <li>To your selected AI provider for optional AI processing (translation / dictionary / questions / LLM meaning).</li>
+    </ul>
+
+    <h2>5. AI-Generated Content and Reporting</h2>
+    <p>
+      AI-generated output may be inaccurate or unsuitable. The app provides in-app report/flag actions
+      on AI-generated surfaces so users can report problematic output.
+    </p>
+
+    <h2>6. Children</h2>
+    <p>
+      FlexReader is a general reading app. Parents/guardians should supervise when children use network-based features.
+      Do not enter sensitive personal information into imported files or prompts.
+    </p>
+
+    <h2>7. Retention and Deletion</h2>
+    <ul>
+      <li>You can delete imported books and dictionaries from inside the app.</li>
+      <li>You can clear app storage by uninstalling the app or clearing app data in Android settings.</li>
+    </ul>
+
+    <h2>8. Third-Party Services</h2>
+    <ul>
+      <li>Project Gutenberg: <a href="https://www.gutenberg.org/policy/privacy_policy.html" target="_blank" rel="noopener noreferrer">gutenberg.org privacy policy</a></li>
+      <li>OpenAI: <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">openai.com privacy policy</a></li>
+      <li>DeepSeek: <a href="https://platform.deepseek.com/" target="_blank" rel="noopener noreferrer">platform.deepseek.com</a></li>
+    </ul>
+
+    <h2>9. Contact</h2>
+    <div class="box">
+      <p>
+        For privacy questions, contact: <code>cocodear01@163.com</code><br />
+      </p>
+    </div>
+
+    <h2>10. Terms of Use</h2>
+    <p>
+      App usage terms are available here:
+      <a href="terms-of-use.html">Terms of Use</a>.
+    </p>
+  </main>
+</body>
+</html>

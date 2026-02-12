@@ -1,0 +1,54 @@
+name: Deploy Policy Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - public/privacy-policy.html
+      - public/support.html
+      - public/terms-of-use.html
+      - .github/workflows/deploy-policy-pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare static pages
+        shell: bash
+        run: |
+          mkdir -p site
+          cp public/privacy-policy.html site/privacy-policy.html
+          cp public/support.html site/support.html
+          cp public/terms-of-use.html site/terms-of-use.html
+          touch site/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
